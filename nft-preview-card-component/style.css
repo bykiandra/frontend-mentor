@@ -10,7 +10,7 @@ body {
   align-items: center;
 }
 
-.card {
+main {
   background-color: hsl(216, 50%, 16%);
   color: hsl(0, 0%, 100%);
   max-width: 302px;
@@ -20,18 +20,18 @@ body {
   box-shadow: 10px 0 10px hsl(217, 54%, 11%);
 }
 
-.card .image {
+main .image {
   position: relative;
 }
 
-.card .image img {
+main .image img {
   width: 100%;
   border-radius: 15px;
   position: relative;
   z-index: 1;
 }
 
-.card .image .overlay {
+main .image .overlay {
   position: absolute;
   z-index: 2;
   top: 0;
@@ -45,11 +45,11 @@ body {
   opacity: 0;
 }
 
-.card .image .overlay img {
+main .image .overlay img {
   width: 44px;
 }
 
-.card .image:hover .overlay {
+main .image:hover .overlay {
   opacity: 1;
 }
 
@@ -122,14 +122,14 @@ a:hover {
   color: hsl(178, 100%, 50%);
 }
 
-.attribution {
+footer {
   font-size: 11px;
   text-align: center;
   position: absolute;
   bottom: 10px;
 }
 
-.attribution a {
+footer a {
   color: hsl(228, 45%, 44%);
 }
 
