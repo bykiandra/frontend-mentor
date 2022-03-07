@@ -2,29 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Advice generator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cyan: 'hsl(193, 38%, 86%)',
+            neon_green: 'hsl(150, 100%, 66%)',
+            gray_blue: 'hsl(217, 19%, 38%)',
+            dark_gray_blue: 'hsl(217, 19%, 24%)',
+            dark_blue: 'hsl(218, 23%, 16%)'
+          }
+        },
+        fontFamily: {
+          'display': ['Manrope', 'ui-sans-serif', 'system-ui']
+        },
+        fontSize: {
+          'size-10': '10px',
+          'size-28': '28px'
+        }
+      }
+    }
+  </script>
   <script src="index.js"></script>
 </head>
-<body>
+<body class="bg-dark_blue">
+  <div id="container" class="w-screen h-screen flex justify-center text-center">
+    <div id="advice_box" class="bg-dark_gray_blue self-center p-14 rounded-2xl max-w-md">
+      <p class="text-neon_green text-size-10 tracking-wider">
+        ADVICE #<span id="advice_id"></span>
+      </p>
+    
+      <p id="advice" class="text-size-28 text-cyan py-9 font-display font-extrabold">
+        "<span id="advice_text"></span>"
+      </p>
 
-  Advice #<span id="advice_id"></span>
-
-  "<span id="advice_text"></span>"
+      <img src="images/pattern-divider-desktop.svg" alt="'Divider" />
+    </div>
+  </div>
   
-  <div class="attribution">
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://kiandraginevra.dev">Kiandra Ginevra</a>.
-  </div>
+  </footer>
 </body>
 </html>

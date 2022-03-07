@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100vw;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
