@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | QR code component</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: 'hsl(212, 45%, 89%)',
+            gray_blue: 'hsl(220, 15%, 55%)',
+            dark_blue: 'hsl(218, 44%, 22%)'
+          }
+        },
+        fontFamily: {
+          'outfit': ['Outfit', 'ui-sans-serif', 'system-ui']
+        },
+        fontSize: {
+          'size-15': '15px',
+          'size-22': '22px'
+        }
+      }
+    }
+  </script>
+</head>
+<body class="h-screen bg-gray flex justify-center items-center">
+
+  <div class="w-80 bg-white font-outfit text-center rounded-[20px]">
+    <div id="qr-code"></div>
+  
+    <h1 class="text-size-22 font-bold text-dark_blue leading-7 px-4 pt-2 pb-4">
+      Improve your front-end skills by building projects
+    </h1>
+  
+    <p class="text-size-15 text-gray_blue leading-5 tracking-wide px-7 pb-9">
+      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+    </p>
+  </div>
+
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://kiandraginevra.dev">Kiandra Ginevra</a>.
+  </footer>
+</body>
+</html>
