@@ -17,6 +17,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Kiandra Ginevra](https://crownedfox.es)
+- Website - [Kiandra Ginevra](https://kiandraginevra.dev)
 - Frontend Mentor - [@crownedfoxes](https://www.frontendmentor.io/profile/crownedfoxes)
 - Twitter - [@crownedfoxes](https://www.twitter.com/crownedfoxes)
