@@ -11,11 +11,11 @@
 }
 
 footer {
-  font-size: 11px;
-  text-align: center;
+  font-size: 10px;
+  text-align: right;
   position: absolute;
   bottom: 10px;
-  width: 100vw;
+  right: 10px;
 }
 
 footer a {
