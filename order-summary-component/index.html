@@ -10,6 +10,9 @@
   <script>
     tailwind.config = {
       theme: {
+        screens: {
+          'mobile': {'max': '480px'}
+        },
         extend: {
           colors: {
             pale_blue: 'hsl(225, 100%, 94%)',
@@ -25,6 +28,7 @@
         },
         fontSize: {
           'size-14': '14px',
+          'size-22': '22px',
           'size-28': '28px'
         }
       }
@@ -33,40 +37,40 @@
 </head>
 <body class="min-h-screen bg-pale_blue flex justify-center items-center antialiased">
 
-  <main class="w-[450px] bg-white font-red-hat text-center rounded-[20px] overflow-hidden pb-12">
+  <main class="w-[450px] mobile:w-[327px] bg-white font-red-hat text-center rounded-[20px] overflow-hidden pb-12 mobile:pb-8 mx-4">
     <img src="images/illustration-hero.svg" alt="Listening to music" />
 
-    <h1 class="font-black text-size-28 text-dark_blue pt-10">
+    <h1 class="font-black text-size-28 mobile:text-size-22 text-dark_blue pt-10 mobile:pt-7">
       Order Summary
     </h1>
   
-    <p class="text-gray_blue leading-7 px-12 pt-4">
+    <p class="text-gray_blue mobile:text-size-14 leading-7 mobile:leading-6 px-12 pt-4">
       You can now listen to millions of songs, audiobooks, and podcasts on any 
     device anywhere you like!
     </p>
   
     <section
-      class="bg-light_pale_blue mx-12 rounded-[10px] grid grid-cols-4 mt-4 mb-8 p-6">
+      class="bg-light_pale_blue mx-12 mobile:mx-6 rounded-[10px] grid grid-cols-4 mt-4 mobile:mt-6 mb-8 mobile:mb-7 p-6 mobile:p-4">
       <img src="images/icon-music.svg" alt="Music icon" />
-      <span class="col-span-2 text-left">
-        <h2 class="font-bold text-dark_blue">Annual Plan</h2>
-        <p class="text-gray_blue">$59.99/year</p>
+      <span class="col-span-2 text-left sm:pl-2">
+        <h2 class="font-bold text-dark_blue mobile:text-size-14 mobile:pt-1">Annual Plan</h2>
+        <p class="text-gray_blue mobile:text-size-14">$59.99/year</p>
       </span>
       
       <a
         href="#"
-        class="my-auto font-bold text-bright_blue text-right underline text-size-14 hover:text-bright_blue_hover hover:no-underline"
+        class="my-auto font-bold text-bright_blue text-right underline text-size-14 mobile:text-[13px] hover:text-bright_blue_hover hover:no-underline"
       >
         Change
       </a>
     </section>
   
     <button
-      class="block w-[350px] bg-bright_blue font-bold text-white rounded-[10px] mx-12 mb-8 p-3 drop-shadow-xl hover:bg-bright_blue_hover">
+      class="block w-[350px] mobile:w-[278px] bg-bright_blue font-bold text-white mobile:text-[15px] rounded-[10px] mx-12 mobile:mx-6 mb-8 mobile:mb-6 p-3 drop-shadow-xl hover:bg-bright_blue_hover">
       Proceed to Payment
     </button>
 
-    <a href="#" class="font-black text-gray_blue text-size-14 hover:text-dark_blue">
+    <a href="#" class="font-black text-gray_blue text-[15px] hover:text-dark_blue">
       Cancel Order
     </a>
   </main>
