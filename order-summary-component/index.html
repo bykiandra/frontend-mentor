@@ -2,36 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pale_blue: 'hsl(225, 100%, 94%)',
+            bright_blue: 'hsl(245, 75%, 52%)',
+            bright_blue_hover: 'hsl(245, 83%, 68%)',
+            light_pale_blue: 'hsl(225, 100%, 98%)',
+            gray_blue: 'hsl(224, 23%, 55%)',
+            dark_blue: 'hsl(223, 47%, 23%)'
+          }
+        },
+        fontFamily: {
+          'red-hat': ['Red Hat Display', 'ui-sans-serif', 'system-ui']
+        },
+        fontSize: {
+          'size-14': '14px',
+          'size-28': '28px'
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="min-h-screen bg-pale_blue flex justify-center items-center antialiased">
 
-  Order Summary
+  <main class="w-[450px] bg-white font-red-hat text-center rounded-[20px] overflow-hidden pb-12">
+    <img src="images/illustration-hero.svg" alt="Listening to music" />
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+    <h1 class="font-black text-size-28 text-dark_blue pt-10">
+      Order Summary
+    </h1>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <p class="text-gray_blue leading-7 px-12 pt-4">
+      You can now listen to millions of songs, audiobooks, and podcasts on any 
+    device anywhere you like!
+    </p>
+  
+    <section
+      class="bg-light_pale_blue mx-12 rounded-[10px] grid grid-cols-4 mt-4 mb-8 p-6">
+      <img src="images/icon-music.svg" alt="Music icon" />
+      <span class="col-span-2 text-left">
+        <h2 class="font-bold text-dark_blue">Annual Plan</h2>
+        <p class="text-gray_blue">$59.99/year</p>
+      </span>
+      
+      <a
+        href="#"
+        class="my-auto font-bold text-bright_blue text-right underline text-size-14 hover:text-bright_blue_hover hover:no-underline"
+      >
+        Change
+      </a>
+    </section>
+  
+    <button
+      class="block w-[350px] bg-bright_blue font-bold text-white rounded-[10px] mx-12 mb-8 p-3 drop-shadow-xl hover:bg-bright_blue_hover">
+      Proceed to Payment
+    </button>
+
+    <a href="#" class="font-black text-gray_blue text-size-14 hover:text-dark_blue">
+      Cancel Order
+    </a>
+  </main>
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br />
+    Coded by <a href="https://kiandraginevra.dev">Kiandra Ginevra</a>.
+  </footer>
 </body>
 </html>
