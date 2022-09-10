@@ -16,6 +16,16 @@
   z-index: -1;
 }
 
+@media (min-width: 640px) {
+  #bg-top {
+    transform: translateY(-50%) translateX(-20%);
+  }
+  
+  #bg-bottom {
+    transform: translateY(50%) translateX(20%);
+  }
+}
+
 footer {
   font-size: 10px;
   text-align: right;
