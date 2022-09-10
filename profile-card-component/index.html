@@ -2,34 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Profile card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'hero-pattern': "url('images/bg-pattern-card.svg')"
+          },
+          colors: {
+            dark_cyan: 'hsl(185, 75%, 39%)',
+            dark_blue: 'hsl(229, 23%, 23%)',
+            dark_gray_blue: 'hsl(227, 10%, 46%)',
+            dark_gray: 'hsl(0, 0%, 59%)'
+          }
+        },
+        fontFamily: {
+          'kumbh': ['Kumbh Sans', 'ui-sans-serif', 'system-ui']
+        },
+        fontSize: {
+          'size-10': '10px',
+          'size-18': '18px'
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  Victor Crest
-  26
-  London
+<body class="min-h-screen bg-dark_cyan flex justify-center items-center antialiased">
+  <img src="images/bg-pattern-top.svg" alt="Top background circle" id="bg-top" />
+  <img src="images/bg-pattern-bottom.svg" alt="Bottom background circle" id="bg-bottom" />
 
-  80K
-  Followers
+  <main class="w-[326px] sm:w-[350px] bg-white font-kumbh text-center rounded-2xl overflow-hidden bg-hero-pattern bg-no-repeat">
+    <img
+      src="images/image-victor.jpg"
+      alt="Victor Crest avatar"
+      class="rounded-[100%] border-[5px] border-white mx-auto mt-[87px] pb-4"
+    />
+    <h1 class="font-bold text-size-18 text-dark_blue mb-1">
+      Victor Crest
+      <span class="font-normal text-dark_gray_blue pl-1">26</span>
+    </h1>
+    <span class="text-[14px] text-dark_gray_blue">London</span>
 
-  803K
-  Likes
+    <article class="border-t border-gray-200 mt-5 mr-1 sm:ml-2 p-6 grid grid-cols-3">
+      <section>
+        <span class="block font-bold text-size-18 text-dark_blue mb-[-8px]">80K</span>
+        <span class="text-size-10 text-dark_gray_blue tracking-widest">Followers</span>
+      </section>
+  
+      <section>
+        <span class="block font-bold text-size-18 text-dark_blue mb-[-8px]">803K</span>
+        <span class="text-size-10 text-dark_gray_blue tracking-widest">Likes</span>
+      </section>
+      
+      <section>
+        <span class="block font-bold text-size-18 text-dark_blue mb-[-8px]">1.4K</span>
+        <span class="text-size-10 text-dark_gray_blue tracking-widest">Photos</span>
+      </section>
+    </article>
+  </main>
 
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br />
+    Coded by <a href="https://kiandraginevra.dev">Kiandra Ginevra</a>.
+  </footer>
 </body>
 </html>

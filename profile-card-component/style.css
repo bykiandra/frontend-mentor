@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+#bg-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%) translateX(-40%);
+  z-index: -1;
+}
+
+#bg-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateY(50%) translateX(40%);
+  z-index: -1;
+}
+
+footer {
+  font-size: 10px;
+  text-align: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+footer a {
+  color: hsl(228, 45%, 44%);
+}
