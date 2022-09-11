@@ -2,35 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark_cyan: 'hsl(158, 36%, 37%)',
+            cream: 'hsl(30, 38%, 92%)',
+            dark_blue: 'hsl(212, 21%, 14%)',
+            gray_blue: 'hsl(228, 12%, 48%)'
+          }
+        },
+        fontFamily: {
+          'sans-serif': ['Montserrat', 'ui-sans-serif', 'system-ui'],
+          'display': ['Fraunces', 'Georgia', 'Times New Roman']
+        }
+      }
+    }
+  </script>
 </head>
-<body>
+<body class="min-h-screen bg-cream flex justify-center items-center antialiased">
 
-  Preview
+  <main class="w-[343px] bg-white rounded-[10px] overflow-hidden mx-4">
 
-  Gabrielle Essence Eau De Parfum
+    <img
+      src="images/image-product-mobile.jpg"
+      alt="Gabrielle perfume image"
+      class="mb-[18px]"
+      />
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
+    <span class="font-sans-serif uppercase text-gray_blue tracking-[0.42em] text-xs mx-6">
+      Perfume
+    </span>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <h1 class="font-display text-dark_blue text-[2em] leading-[1em] mx-6 mt-[10px]">
+      Gabrielle Essence Eau De Parfum
+    </h1>
+  
+    <p class="font-sans-serif text-gray_blue text-sm leading-[23px] mx-6 mt-4 mb-4">
+      A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+      Perfumer-Creator for the House of CHANEL.
+    </p>
+  
+    <section class="mx-6 pb-6">
+      <h2 class="flex items-center font-display text-dark_cyan text-[2em] pb-[11px]">
+        $149.99
+        <span class="font-sans-serif text-normal text-gray_blue text-xs line-through pl-5">
+          $169.99
+        </span>
+      </h2>
+    
+      <button class="flex flex-row justify-center items-center bg-dark_cyan text-white font-sans-serif font-bold text-sm w-full rounded-[10px] py-[14px]">
+        <img src="images/icon-cart.svg" alt="Add to cart" class="pr-[9px]" />
+        Add to Cart
+      </button>
+    </section>
+  </main>
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br />
+    Coded by <a href="https://kiandraginevra.dev">Kiandra Ginevra</a>.
+  </footer>
 </body>
 </html>
