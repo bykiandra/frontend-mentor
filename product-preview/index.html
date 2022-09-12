@@ -28,24 +28,24 @@
 </head>
 <body class="min-h-screen bg-cream flex justify-center items-center antialiased">
 
-  <main class="flex flex-col sm:flex-row w-[343px] sm:w-[600px] bg-white rounded-[10px] overflow-hidden mx-4">
+  <main class="grid grid-rows-1 sm:grid-cols-2 w-[343px] sm:w-[600px] bg-white rounded-[10px] overflow-hidden mx-4">
 
-    <picture class="sm:w-1/2">
+    <picture>
       <source media="(max-width: 639px)" srcset="images/image-product-mobile.jpg" />
       <source media="(min-width: 640px)" srcset="images/image-product-desktop.jpg" />
       <img src="images/image-product-desktop.jpg" alt="Gabrielle perfume image" class="mb-[18px] sm:mb-0" />
     </picture>
 
-    <article class="mx-6 sm:mx-8 sm:pt-8 sm:w-1/2">
+    <article class="mx-6 sm:mx-8 sm:pt-[26px]">
       <span class="font-sans-serif uppercase text-gray_blue tracking-[0.42em] text-xs">
         Perfume
       </span>
     
-      <h1 class="font-display text-dark_blue text-[2em] leading-[1em] mt-[10px] sm:mt-4">
+      <h1 class="font-display text-dark_blue text-[2em] leading-[1em] mt-[10px] sm:mt-[18px]">
         Gabrielle Essence Eau De Parfum
       </h1>
     
-      <p class="font-sans-serif text-gray_blue text-sm leading-[23px] my-4 sm:my-6">
+      <p class="font-sans-serif text-gray_blue text-sm leading-[23px] my-4 sm:mt-6 sm:mb-[21px]">
         A floral, solar and voluptuous interpretation composed by Olivier Polge, 
         Perfumer-Creator for the House of CHANEL.
       </p>
@@ -58,7 +58,7 @@
           </span>
         </h2>
       
-        <button class="flex flex-row justify-center items-center bg-dark_cyan text-white font-sans-serif font-bold text-sm w-full rounded-[10px] py-[14px]">
+        <button class="flex flex-row justify-center items-center bg-dark_cyan text-white font-sans-serif font-bold text-sm w-full rounded-[10px] py-[14px] sm:mt-[2px]">
           <img src="images/icon-cart.svg" alt="Add to cart" class="pr-[9px]" />
           Add to Cart
         </button>
